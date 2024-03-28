@@ -1,5 +1,7 @@
 package br.com.armandoplacido.picpaydesafiobackend.transaction;
 
+import java.util.List;
+
 import org.springframework.stereotype.Service;
 
 import br.com.armandoplacido.picpaydesafiobackend.authorization.AuthorizationService;
@@ -42,6 +44,10 @@ public class TransactionService {
     notificationService.sendNotification(transaction);
 
     return newTransaction;
+  }
+
+  public List<Transaction> listAllTransactions(){
+    return transactionRepository.findAll();
   }
 
   private void validate(Transaction transaction) {
