@@ -1,0 +1,14 @@
+FROM maven:3.9.6-eclipse-temurin-21-alpine AS builder
+
+WORKDIR /usr/app/
+
+COPY . .
+
+RUN mvn clean
+RUN mvn install -DskipTests
+
+FROM eclipse-temurin:21.0.2_13-jre-jammy
+
+COPY --from=builder /usr/app/target/*.jar /opt/app/application.jar
+
+CMD java -jar /opt/app/application.jar
