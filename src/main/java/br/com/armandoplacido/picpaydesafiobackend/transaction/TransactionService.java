@@ -1,5 +1,7 @@
 package br.com.armandoplacido.picpaydesafiobackend.transaction;
 
+import org.springframework.stereotype.Service;
+
 import br.com.armandoplacido.picpaydesafiobackend.authorization.AuthorizationService;
 import br.com.armandoplacido.picpaydesafiobackend.notification.NotificationService;
 import br.com.armandoplacido.picpaydesafiobackend.transaction.exception.InvalidTransactionException;
@@ -7,13 +9,12 @@ import br.com.armandoplacido.picpaydesafiobackend.wallet.Wallet;
 import br.com.armandoplacido.picpaydesafiobackend.wallet.WalletRepository;
 import br.com.armandoplacido.picpaydesafiobackend.wallet.WalletType;
 
+@Service
 public class TransactionService {
   private final TransactionRepository transactionRepository;
   private final WalletRepository walletRepository;
   private final AuthorizationService authorizationService;
   private final NotificationService notificationService;
-
-
 
   public TransactionService(
     TransactionRepository transactionRepository, 
