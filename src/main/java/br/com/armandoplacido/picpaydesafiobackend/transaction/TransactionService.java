@@ -18,7 +18,7 @@ public class TransactionService {
   }
 
   public void createTransaction(Transaction transaction){
-
+    validate(transaction);
   }
 
   private void validate(Transaction transaction) {
