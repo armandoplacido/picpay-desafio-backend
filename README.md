@@ -4,8 +4,6 @@
 
 API para gerenciar lugares (CRUD) que faz parte [desse desafio](https://github.com/RocketBus/quero-ser-clickbus/tree/master/testes/backend-developer) para pessoas desenvolvedoras backend que se candidatam para a ClickBus.
 
-O projeto foi elaborado [nesse vídeo](https://youtu.be/SsWZ4O9iWuo).
-
 ## Tecnologias
  
 - [Spring Boot](https://spring.io/projects/spring-boot)
